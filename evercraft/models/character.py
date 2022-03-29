@@ -10,15 +10,19 @@ import pytest
 # this is where your character code will go
 
 class Character():
-    def __init__(self):
-        self.values = {
-            "key" : "value",
-            "name" : "default",
-            "alignment" : "default"
-        }
+    DEFAULT_VALUES = {
+        "name": "Billy",
+        "alignment": "Good"
+    }
 
-    def set_name(self, name):
-        self.values["name"] = name
-    
-    def set_alignment(self, alignment):
-        self.values["alignment"] = alignment
+    def __init__(self, obj=None):
+        if obj:
+            for key, value in obj:
+                print(DEFAULT_VALUES[key])
+        # else self.name = DEFAULT_VALUES
+
+    # def set_name(self, name):
+    #     self.values["name"] = name
+
+    # def set_alignment(self, alignment):
+    #     self.values["alignment"] = alignment

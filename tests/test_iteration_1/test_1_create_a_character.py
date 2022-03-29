@@ -15,8 +15,10 @@ def test_CreateChar():
 
 # Set character name
 def test_CreateCharName():
-    c = Character()
-    c.set_name("Billy")
+    c1 = {
+        "name":"Billy"
+    }
+    c = Character(c1)
     assert c.values["name"] == "Billy"
 
 # Two Characters
